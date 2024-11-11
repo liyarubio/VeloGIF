@@ -4,6 +4,9 @@
 
 This project provides a pre-configured Docker image containing a fully functional Conda environment, which supports 12 different execution sub-environments. Additionally, it includes convenient scripts for one-click computation, automated figure generation, and packaging, allowing users to quickly set up and use the environment.
 
+![image](https://github.com/liyarubio/VeloGIF/blob/main/Figure/Fig1A.png)
+
+
 ## Prerequisites
 
 Please ensure that you have installed the latest version of Docker and have configured it properly.
