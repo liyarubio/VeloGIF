@@ -1,4 +1,4 @@
-# RNA Analysis Project
+# VeloGIF
 
 ## Project Overview
 
