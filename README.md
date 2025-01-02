@@ -86,7 +86,7 @@ cd /velogif
 
 #### Select algorithms
 - Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html), and the [input data](https://sysomics.com/velogif/rna_velocity_methods/input_data_requirement.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
-
+  
 ```
 Methods =[
     'velocyto',
@@ -118,31 +118,64 @@ data_cluster = 'CellType' # Key for annotations of observations/cells, a column 
 gene_number = 2000 # Gene number 
 ```
 
-- Each algorithm requires different parameters, and we keep the default parameters of the algorithm, as detailed on [Default Parameters](https://sysomics.com/velogif/tutorials/Default_Parameters.html)
+- Each algorithm requires different parameters, and we keep the default parameters of the algorithm, as detailed on [Default Parameters](https://sysomics.com/velogif/tutorials/Default_Parameters.html). Users also can customize the parameters of each algorithm by modifying ```run_X.py```.
 
+#### Visulization
+- VeloGIF visualizes all results by default. Users can also select the result to draw by modifying ```Methods_name```dictionary.
 
-### 4. Execute the Scripts for Demo Data in the Container
+#### Evaluation
+- Users can quantitatively evaluate RNA velocity results by customizing ```edges``` list and defining cell transfer directions based on prior knowledge, for example, The transformation from Hematopoietic stem cells (HSC) to multipotent progenitor (MPP).
 
+### 4. Execute the Scripts
 - After entering the container, navigate to the application directory and run the calculation script:
-
 ```
 python Run_all_methods.py
 ```
-
-
-
-
-## Notes
-
-1. Ensure your host environment has sufficient GPU resources and that CUDA dependencies are properly installed.
-2. If you encounter any issues during usage, check whether Docker and the NVIDIA Container Toolkit are installed correctly, or review the relevant logs to troubleshoot.
-3. If you need to customize scripts or extend functionality, modify or add files in the `/app` directory and rebuild the Docker image as needed.
+### 5. Exploring the Output 
+```
+result
+├── evals
+│   └── Eval.csv
+├── figures
+│   ├── Merge.svg
+│   ├── cellDancer.svg
+│   ├── DeepVelo (GCN-based).svg
+│   ├── DeepVelo (VAE-based).svg
+│   ├── Dynamo.svg
+│   ├── LatentVelo.svg
+│   ├── MultiVelo.svg
+│   ├── scVelo (dynamic).svg
+│   ├── scVelo (stochastic).svg
+│   ├── STT.svg
+│   ├── TFvelo.svg
+│   ├── UniTVelo.svg
+│   ├── veloAE.svg
+│   ├── velocyto.svg
+│   ├── veloVAE.svg
+│   └── veloVI.svg
+├── execution_log.txt
+├── celldancer.h5ad
+├── deepvelo_gcn.h5ad
+├── deepvelo_vae.h5ad
+├── dynamo.h5ad
+├── latentvelo.h5ad
+├── latentvelo_latent.h5ad
+├── multivelo.h5ad
+├── phylovelo.h5ad
+├── scvelo.dyn.h5ad
+├── scvelo.sto.h5ad
+├── stt.h5ad
+├── tfvelo.svg
+├── unitvelo.h5ad
+├── veloae.h5ad
+├── velocyto.h5ad
+├── velovae.h5ad
+└── velovi.h5ad
+```
 
 ## Contact Us
-
 If you have any questions or suggestions, please contact the project maintainers:
-
-- Email: [support@velogif.com](mailto:support@velogif.com)
-- GitHub Repository: https://github.com/your_repository/velogif
+- Email: bio_liyaru@163.com
+- GitHub Repository: https://github.com/liyarubio/VeloGIF
 
 Thank you for your support and usage!
