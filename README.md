@@ -90,23 +90,21 @@ cd /velogif
 - Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html), and the [input data](https://sysomics.com/velogif/rna_velocity_methods/input_data_requirement.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
   
 ```
-Methods =[
-    'velocyto',
-    'scvelo',
-    'veloae',
-    'dynamo',
-    'velovae',
-    'unitvelo',
-    'deepvelo_vae',
-    'celldancer',
-    'velovi',
-    'latentvelo',
-    'deepVelo_gcn',
-    'stt',
-    'tfvelo', 
-    'multivelo',
-    'phylovelo'
-]
+Methods =['velocyto',
+          'scvelo',
+          'veloae',
+          'dynamo',
+          'velovae',
+          'unitvelo',
+          'deepvelo_vae',
+          'celldancer',
+          'velovi',
+          'latentvelo',
+          'deepVelo_gcn',
+          'stt',
+          'tfvelo', 
+          'multivelo',
+          'phylovelo']
 ```
 
 #### Detailed parameters
