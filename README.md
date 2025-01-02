@@ -1,5 +1,5 @@
 # VeloGIF
-<img src="https://github.com/liyarubio/VeloGIF/blob/main/Figure/VeloGIF.png" width="50%" height="50%">
+<img src="https://github.com/liyarubio/VeloGIF/blob/main/Figure/VeloGIF.png" style="width: 50%; height: 50%; display: block; margin-left: auto; margin-right: auto;">
 More details in our website : https://sysomics.com/velogif
 
 ## Project Overview
