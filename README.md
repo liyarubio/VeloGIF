@@ -49,17 +49,18 @@ docker pull your_repository/velogif:latest
 
 Start the container using the following command, mounting the GPU and specifying the directory:
 
-- With GPU:
 - Mount the host directory to the container using the -v option.
+
 ```
 docker run -d --name <container name> -v <your host path>:<container path> <image>
 ```
 - eg.
+-- With GPU:
 ```
 docker run -d --gpus all --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
 ```
 
-- Without GPU:
+-- Without GPU:
 ```
 docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
 ```
