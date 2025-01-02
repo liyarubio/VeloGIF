@@ -8,41 +8,18 @@ Our benchmark of RNA velocity indicated a significant complementarity among the 
 
 ### 1. Install Docker (Required)
 
-1. Visit the [Docker official website](https://www.docker.com/products/docker-desktop/) and download the latest version of Docker.
-
-2. Follow the specific installation guide for your operating system (Windows, macOS, or Linux):
-
-   - **Windows**: Download the Docker Desktop installer, run the installation, and follow the prompts to complete it. After installation, enable the WSL 2 feature.
-
-   - **macOS**: Download the Docker Desktop version for either Apple Silicon or Intel chips, and run the installer to complete the installation.
-
-   - **Linux**: Use the following commands to install Docker (example for Ubuntu):
-
-     ```
-     sudo apt-get update
-     sudo apt-get install -y ca-certificates curl gnupg
-     sudo install -m 0755 -d /etc/apt/keyrings
-     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-     echo \
-       "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-       $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-     sudo apt-get update
-     sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-     ```
-
-3. Start the Docker service (Linux only):
-
+1. Visit the [Docker official website](https://www.docker.com) and download Docker.
+2. Add docker permissions to the current user.
    ```
-   sudo systemctl start docker
-   sudo systemctl enable docker
+   sudo groupadd docker 
+   sudo gpasswd -a ${USER} docker
+   sudo service docker restart
    ```
-
-4. Verify that Docker is running correctly:
-
+2. Verify that Docker is running correctly:
    ```
    docker --version
    ```
-
+   
 ### 2. Install NVIDIA Container Toolkit (For CUDA Acceleration)
 
 If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
