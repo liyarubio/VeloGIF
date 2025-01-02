@@ -75,7 +75,7 @@ docker exec -it velogif /bin/bash
 ### 4. Execute the Scripts for Demo Data in the Container
 
 After entering the container, navigate to the application directory and run the calculation script:
-- The demo data is sampled 1000 cells from [Redeem dataset](https://doi.org/10.1038/s41586-024-07066-z)
+- The demo data is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z)
 
 ```
 cd /velogif
