@@ -4,8 +4,6 @@
 ## Project Overview
 Our benchmark of RNA velocity indicated a significant complementarity among the various methods, leading us to propose an integration tool, VeloGIF. VeloGIF allows users to concurrently obtain the computation results of 15 various RNA velocity methods, as well as visualization and evaluation results, and could select the outcomes that align most closely with the expectations based on prior knowledge. VeloGIF employed Docker container to wrap each method, which avoids dependency issues.
 
-# Velogif Project
-
 ## Installation
 
 ### 1. Install Docker (Required)
