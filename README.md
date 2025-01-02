@@ -1,6 +1,5 @@
 # VeloGIF
-![image](https://github.com/liyarubio/VeloGIF/blob/main/Figure/VeloGIF.png){:height="20%" width="20%"}
-
+<img src="https://github.com/liyarubio/VeloGIF/blob/main/Figure/VeloGIF.png" width="50%" height="50%">
 More details in our website : https://sysomics.com/velogif
 
 ## Project Overview
