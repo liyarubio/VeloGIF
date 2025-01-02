@@ -9,12 +9,14 @@ Our benchmark of RNA velocity indicated a significant complementarity among the 
 ### 1. Install Docker (Required)
 
 - Visit the [Docker official website](https://www.docker.com) and download Docker.
+  
 - Add docker permissions to the current user.
    ```
    sudo groupadd docker 
    sudo gpasswd -a ${USER} docker
    sudo service docker restart
    ```
+   
 - Verify that Docker is running correctly:
    ```
    docker --version
@@ -61,11 +63,17 @@ docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:late
 
 ### 2. Access the Container Console
 
--Enter the interactive terminal of the container with the following command:
+- Enter the interactive terminal of the container with the following command:
 
 ```
 docker exec -it velogif /bin/bash
 ```
+
+- Navigate to the folder we just mounted
+```
+cd /velogif
+```
+
 ### 3. Custom parameter
 - By modifying the ```config.py``` file, define the file locations for input data and output results, select the algorithm to run, as well as other parameters.
 
@@ -77,11 +85,10 @@ docker exec -it velogif /bin/bash
 - We provide demo data, which is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z). ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information.
 
 #### Select algorithms
-- Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics], and the [input data](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
+- Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html), and the [input data](https://sysomics.com/velogif/rna_velocity_methods/input_data_requirement.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
 
 ```
 Methods =[
-    # conventional scRNA-seq
     'velocyto',
     'scvelo',
     'veloae',
@@ -94,18 +101,31 @@ Methods =[
     'latentvelo',
     'deepVelo_gcn',
     'stt',
-    'tfvelo', # with GRN
-    'multivelo', # with scATAC
-    'phylovelo'  # with lineage info.
+    'tfvelo', 
+    'multivelo',
+    'phylovelo'
 ]
 ```
+
+#### Detailed parameters
+- Default common parameters
+```
+n_job = 10 # Number of parallel jobs.
+device = 'cuda:0' # GPU
+seed = 2024 # random seed
+embed = 'umap' # Key for embedding
+data_cluster = 'CellType' # Key for annotations of observations/cells, a column included in adata.obs
+gene_number = 2000 # Gene number 
+```
+
+- Each algorithm requires different parameters, and we keep the default parameters of the algorithm, as detailed on [Default Parameters](https://sysomics.com/velogif/tutorials/Default_Parameters.html)
+
 
 ### 4. Execute the Scripts for Demo Data in the Container
 
 - After entering the container, navigate to the application directory and run the calculation script:
 
 ```
-cd /velogif
 python Run_all_methods.py
 ```
 
