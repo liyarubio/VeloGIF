@@ -67,21 +67,49 @@ docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:late
 docker exec -it velogif /bin/bash
 ```
 ### 3. Custom parameter
--
+- By modifying the ```config.py``` file, define the file locations for input data and output results, select the algorithm to run, as well as other parameters.
 
+#### Input data
+- Input data should be provided in the form of [.h5ad](https://anndata.readthedocs.io/en/stable/), and the layers contain splice and unsplice matrices. Data preprocessing can refer to [velocyto](http://velocyto.org/velocyto.py/tutorial/cli.html#running-velocyto) and [scVelo](https://scvelo.readthedocs.io/en/stable/VelocityBasics.html#Preprocess-the-Data).
+  
+- Note that [Mutivelo](https://github.com/welch-lab/MultiVelo/) need chromatin accessibility information, [PhyloVelo](https://phylovelo.readthedocs.io/en/latest) need lineage information, and [TFvelo](https://github.com/xiaoyeye/TFvelo) need gene regulatory database. 
+
+- We provide demo data, which is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z). ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information.
+
+#### Select algorithms
+- Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics], and the [input data](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
+
+```
+Methods =[
+    # conventional scRNA-seq
+    'velocyto',
+    'scvelo',
+    'veloae',
+    'dynamo',
+    'velovae',
+    'unitvelo',
+    'deepvelo_vae',
+    'celldancer',
+    'velovi',
+    'latentvelo',
+    'deepVelo_gcn',
+    'stt',
+    'tfvelo', # with GRN
+    'multivelo', # with scATAC
+    'phylovelo'  # with lineage info.
+]
+```
 
 ### 4. Execute the Scripts for Demo Data in the Container
 
 - After entering the container, navigate to the application directory and run the calculation script:
-- The demo data is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z)
 
 ```
 cd /velogif
 python Run_all_methods.py
 ```
 
-## Input data
-- By modifying the ```config.py``` file, define the file locations for input data and output results, select the algorithm to run, as well as other parameters.
+
 
 
 ## Notes
