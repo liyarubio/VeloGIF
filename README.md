@@ -54,13 +54,12 @@ Start the container using the following command, mounting the GPU and specifying
 ```
 docker run -d --name <container name> -v <your host path>:<container path> <image>
 ```
-- eg.
-- With GPU:
+- eg. With GPU:
 ```
 docker run -d --gpus all --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
 ```
 
-- Without GPU:
+- eg. Without GPU:
 ```
 docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
 ```
