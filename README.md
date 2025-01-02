@@ -1,5 +1,5 @@
 # VeloGIF
-![image](https://github.com/liyarubio/VeloGIF/blob/main/Figure/Fig1A.png)
+![image](https://github.com/liyarubio/VeloGIF/blob/main/Figure/VeloGIF.png)
 
 ## Project Overview
 Our [benchmark of RNA velocity methods](https://sysomics.com/velogif/benchmark/Framework_and_Datasets.html) indicated a significant complementarity among the various methods, leading us to propose an integration tool, ```VeloGIF```. The ```Graphics Interchange Format (GIF)``` is a prevalent image file format widely utilized to create live photos due to its excellent compatibility. Our integrated tool employed multiple RNA velocity methods to expand static transcriptional snapshots to dynamic photos, and it is also highly compatible, hence we named it VeloGIF. ```VeloGIF``` allows users to concurrently obtain the computation results of 15 various RNA velocity methods, as well as visualization and evaluation results, and could select the outcomes that align most closely with the expectations based on prior knowledge. VeloGIF employed [Docker container](https://www.docker.com) to wrap each method, which avoids dependency issues.
