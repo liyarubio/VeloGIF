@@ -34,13 +34,6 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
    
 2. Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html):
 
-3. Test if the GPU is working correctly within the container:
-
-   ```
-   docker run --rm --gpus all nvidia/cuda:12.2.0-base nvidia-smi
-   ```
-
-If the above command outputs GPU information, the installation is successful.
 
 ## Getting started
 
@@ -56,8 +49,19 @@ docker pull your_repository/velogif:latest
 
 Start the container using the following command, mounting the GPU and specifying the directory:
 
+- With GPU:
+- Mount the host directory to the container using the -v option.
 ```
-docker run -d --gpus all --name velogif -v /opt/pysc:/app your_repository/velogif:latest
+docker run -d --name <container name> -v <your host path>:<container path> <image>
+```
+- eg.
+```
+docker run -d --gpus all --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
+```
+
+- Without GPU:
+```
+docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
 ```
 
 ### 3. Access the Container Console
