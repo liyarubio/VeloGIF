@@ -8,14 +8,14 @@ Our benchmark of RNA velocity indicated a significant complementarity among the 
 
 ### 1. Install Docker (Required)
 
-1. Visit the [Docker official website](https://www.docker.com) and download Docker.
-2. Add docker permissions to the current user.
+- Visit the [Docker official website](https://www.docker.com) and download Docker.
+- Add docker permissions to the current user.
    ```
    sudo groupadd docker 
    sudo gpasswd -a ${USER} docker
    sudo service docker restart
    ```
-2. Verify that Docker is running correctly:
+- Verify that Docker is running correctly:
    ```
    docker --version
    ```
@@ -24,7 +24,7 @@ Our benchmark of RNA velocity indicated a significant complementarity among the 
 
 If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 
-1. Ensure that your system has NVIDIA drivers installed and that CUDA is properly configured.
+- Ensure that your system has NVIDIA drivers installed and that CUDA is properly configured.
 
    - You can check if the NVIDIA drivers are available using the following command:
 
@@ -32,24 +32,19 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
    nvidia-smi
    ```
    
-2. Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html):
+- Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html):
 
+### 3. Set the Image Repository and Pull the Image
 
-## Getting started
-
-### 1. Set the Image Repository and Pull the Image
-
-First, configure the provided image repository address and account information, then pull the required Docker image:
-
+- configure the provided image repository address and account information, then pull the required Docker image:
 ```
 docker pull your_repository/velogif:latest
 ```
 
-### 2. Start the Container (Mount GPU and Specify Directory)
+## Getting started
+### 1. Start the Container (Mount GPU and Specify Directory)
 
-Start the container using the following command, mounting the GPU and specifying the directory:
-
-- Mount the host directory to the container using the -v option.
+-Start the container using the following command, mounting the GPU and specifying the directory:
 
 ```
 docker run -d --name <container name> -v <your host path>:<container path> <image>
@@ -64,17 +59,20 @@ docker run -d --gpus all --name velogif -v /Your_Path:/velogif your_repository/v
 docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
 ```
 
-### 3. Access the Container Console
+### 2. Access the Container Console
 
-Enter the interactive terminal of the container with the following command:
+-Enter the interactive terminal of the container with the following command:
 
 ```
 docker exec -it velogif /bin/bash
 ```
+### 3. Custom parameter
+-
+
 
 ### 4. Execute the Scripts for Demo Data in the Container
 
-After entering the container, navigate to the application directory and run the calculation script:
+- After entering the container, navigate to the application directory and run the calculation script:
 - The demo data is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z)
 
 ```
@@ -83,7 +81,7 @@ python Run_all_methods.py
 ```
 
 ## Input data
-
+- By modifying the ```config.py``` file, define the file locations for input data and output results, select the algorithm to run, as well as other parameters.
 
 
 ## Notes
