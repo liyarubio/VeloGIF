@@ -1,16 +1,10 @@
 # VeloGIF
-
-## Project Overview
-
-Our benchmark of RNA velocity indicated a significant complementarity among the various methods, leading us to propose an integration tool, VeloGIF. VeloGIF allows users to concurrently obtain the computation results of 15 various RNA velocity methods, as well as visualization and evaluation results, and could select the outcomes that align most closely with the expectations based on prior knowledge. VeloGIF employed Docker container to wrap each method, which avoids dependency issues.
-
 ![image](https://github.com/liyarubio/VeloGIF/blob/main/Figure/Fig1A.png)
 
-# Velogif Project
-
 ## Project Overview
+Our benchmark of RNA velocity indicated a significant complementarity among the various methods, leading us to propose an integration tool, VeloGIF. VeloGIF allows users to concurrently obtain the computation results of 15 various RNA velocity methods, as well as visualization and evaluation results, and could select the outcomes that align most closely with the expectations based on prior knowledge. VeloGIF employed Docker container to wrap each method, which avoids dependency issues.
 
-This project provides a pre-configured Docker image that includes a complete Conda environment, supporting 15 different execution sub-environments. Additionally, the project offers one-click calculation scripts and one-click chart generation scripts to help users get started quickly and efficiently.
+# Velogif Project
 
 ## Installation
 
