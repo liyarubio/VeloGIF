@@ -72,14 +72,19 @@ Enter the interactive terminal of the container with the following command:
 docker exec -it velogif /bin/bash
 ```
 
-### 4. Execute the Scripts in the Container
+### 4. Execute the Scripts for Demo Data in the Container
 
 After entering the container, navigate to the application directory and run the calculation script:
+- The demo data is sampled 1000 cells from [Redeem dataset](https://doi.org/10.1038/s41586-024-07066-z)
 
 ```
 cd /velogif
 python Run_all_methods.py
 ```
+
+## Input data
+
+
 
 ## Notes
 
