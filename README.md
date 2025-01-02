@@ -135,10 +135,10 @@ python Run_all_methods.py
 ```
 result
 ├── evals
-│   └── Eval.csv
+│   └── Eval.csv                    # GDC, CBDir, and ICCoh value of each method
 ├── figures
-│   ├── Merge.svg
-│   ├── cellDancer.svg
+│   ├── Merge.svg                   # Velocity stream of all methods
+│   ├── cellDancer.svg              # Velocity stream of each method
 │   ├── DeepVelo (GCN-based).svg
 │   ├── DeepVelo (VAE-based).svg
 │   ├── Dynamo.svg
@@ -153,13 +153,12 @@ result
 │   ├── velocyto.svg
 │   ├── veloVAE.svg
 │   └── veloVI.svg
-├── execution_log.txt
-├── celldancer.h5ad
+├── execution_log.txt               # Log file for running all methods
+├── celldancer.h5ad                 # .h5ad files contain results of each methods, the RNA velocity result in adata.layers['velocity']
 ├── deepvelo_gcn.h5ad
 ├── deepvelo_vae.h5ad
 ├── dynamo.h5ad
 ├── latentvelo.h5ad
-├── latentvelo_latent.h5ad
 ├── multivelo.h5ad
 ├── phylovelo.h5ad
 ├── scvelo.dyn.h5ad
