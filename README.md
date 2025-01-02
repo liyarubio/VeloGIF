@@ -20,7 +20,7 @@ Our benchmark of RNA velocity indicated a significant complementarity among the 
    docker --version
    ```
    
-### 2. Install NVIDIA Container Toolkit (For CUDA Acceleration)
+### 2. Install NVIDIA Container Toolkit (Optional, For CUDA Acceleration)
 
 If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 
@@ -31,31 +31,8 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
    ```
    nvidia-smi
    ```
-
-2. Install the NVIDIA Container Toolkit:
-
-   - Add NVIDIA's package repository:
-
-     ```
-     distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
-     && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
-     && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
-        sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-     ```
-
-   - Update the package list and install the NVIDIA Container Toolkit:
-
-     ```
-     sudo apt-get update
-     sudo apt-get install -y nvidia-container-toolkit
-     ```
-
-   - Configure the container runtime and restart Docker:
-
-     ```
-     sudo nvidia-ctk runtime configure --runtime=docker
-     sudo systemctl restart docker
-     ```
+   
+2. Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html):
 
 3. Test if the GPU is working correctly within the container:
 
