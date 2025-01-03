@@ -27,9 +27,7 @@ Our [benchmark of RNA velocity methods](https://sysomics.com/velogif/benchmark/F
 
 If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 
-- Ensure that your system has NVIDIA drivers installed and that CUDA is properly configured.
-
-   - You can check if the NVIDIA drivers are available using the following command:
+- Ensure that your system has NVIDIA drivers installed and that CUDA is properly configured. You can check if the NVIDIA drivers are available using the following command:
 
    ```
    nvidia-smi
