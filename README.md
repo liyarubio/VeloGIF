@@ -128,7 +128,7 @@ velocity_layer = 'velocity'# Key for velocity to be visualized
 - VeloGIF visualizes all results by default. Users can also select the result to draw by modifying ```Methods_name```dictionary.
 
 #### Evaluation
-- Users can quantitatively evaluate RNA velocity results by customizing ```edges``` list and defining cell transfer directions based on prior knowledge, for example, The transformation from Hematopoietic stem cells (HSC) to multipotent progenitor (MPP).
+- Users can quantitatively evaluate RNA velocity results by customizing ```edges``` list and defining cell transfer directions based on prior knowledge. eg. The transformation from Hematopoietic stem cells (HSC) to multipotent progenitor (MPP).
 
 ### 4. Execute the Scripts
 - After entering the container, navigate to the application directory and run the calculation script:
