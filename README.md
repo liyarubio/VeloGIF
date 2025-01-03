@@ -33,7 +33,7 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
    nvidia-smi
    ```
    
-- Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html):
+- Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
 ### 3. Set the Image Repository and Pull the Image
 
