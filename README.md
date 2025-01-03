@@ -47,7 +47,7 @@ docker pull your_repository/velogif:latest
 ```
 docker images
 ```
-### 4. Download the scripts on GitHub, and extract files
+### 4. Download the scripts on [VeloGIF GitHub](https://github.com/liyarubio/VeloGIF/archive/refs/heads/main.zip), and extract files
 ```
 unzip VeloGIF-main.zip
 cd VeloGIF-main
