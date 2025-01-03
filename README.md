@@ -40,50 +40,50 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 ### 3. Set the Image Repository and Pull the Image
 
 - configure the provided image repository address and account information, then pull the required Docker image:
-```
-docker pull your_repository/velogif:latest
-```
+  ```
+  docker pull your_repository/velogif:latest
+  ```
 - check local images and ensure that the VeloGIF is successfully pulled
-```
-docker images
-```
+  ```
+  docker images
+  ```
 ### 4. Download the scripts on [VeloGIF GitHub](https://github.com/liyarubio/VeloGIF/archive/refs/heads/main.zip), and extract files
-```
-unzip VeloGIF-main.zip
-cd VeloGIF-main
-unzip tools.zip
-```
+  ```
+  unzip VeloGIF-main.zip
+  cd VeloGIF-main
+  unzip tools.zip
+  ```
 
 ## Getting started
 ### 1. Start the Container (Mount GPU and Specify Directory)
 
 - Start the container using the following command, mounting the GPU and specifying the directory:
 
-```
-docker run -d --name <container name> -v <your host path>:<container path> <image>
-```
+  ```
+  docker run -d --name <container name> -v <your host path>:<container path> <image>
+  ```
 - eg. With GPU:
-```
-docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
-```
+  ```
+  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
+  ```
 
 - eg. Without GPU:
-```
-docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
-```
+  ```
+  docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
+  ```
 
 ### 2. Access the Container Console
 
 - Enter the interactive terminal of the container with the following command:
 
-```
-docker exec -it velogif /bin/bash
-```
+  ```
+  docker exec -it velogif /bin/bash
+  ```
 
 - Navigate to the folder we just mounted
-```
-cd /velogif
-```
+  ```
+  cd /velogif
+  ```
 
 ### 3. Custom parameter
 - By modifying the ```config.py``` file, define the file locations for input data and output results, select the algorithm to run, as well as other parameters.
@@ -101,35 +101,35 @@ cd /velogif
 #### Select algorithms
 - Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html), and the [input data](https://sysomics.com/velogif/rna_velocity_methods/input_data_requirement.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
   
-```
-Methods =['velocyto',
-          'scvelo',
-          'veloae',
-          'dynamo',
-          'velovae',
-          'unitvelo',
-          'deepvelo_vae',
-          'celldancer',
-          'velovi',
-          'latentvelo',
-          'deepVelo_gcn',
-          'stt',
-          'tfvelo', 
-          'multivelo',
-          'phylovelo']
-```
+  ```
+  Methods =['velocyto',
+            'scvelo',
+            'veloae',
+            'dynamo',
+            'velovae',
+            'unitvelo',
+            'deepvelo_vae',
+            'celldancer',
+            'velovi',
+            'latentvelo',
+            'deepVelo_gcn',
+            'stt',
+            'tfvelo', 
+            'multivelo',
+            'phylovelo']
+  ```
 
 #### Detailed parameters
 - Default common parameters
-```
-n_job = 10 # Number of parallel jobs.
-device = 'cuda:0' # GPU
-seed = 2024 # random seed
-embed = 'umap' # Key for embedding
-data_cluster = 'CellType' # Key for annotations of observations/cells, a column included in adata.obs
-gene_number = 2000 # Gene number
-velocity_layer = 'velocity'# Key for velocity to be visualized
-```
+  ```
+  n_job = 10 # Number of parallel jobs.
+  device = 'cuda:0' # GPU
+  seed = 2024 # random seed
+  embed = 'umap' # Key for embedding
+  data_cluster = 'CellType' # Key for annotations of observations/cells, a column included in adata.obs
+  gene_number = 2000 # Gene number
+  velocity_layer = 'velocity'# Key for velocity to be visualized
+  ```
 
 - Each algorithm requires different parameters, and we keep the default parameters of the algorithm, as detailed on [Default Parameters](https://sysomics.com/velogif/tutorials/Default_Parameters.html). Users also can customize the parameters of each algorithm by modifying ```run_X.py```.
 
@@ -141,49 +141,49 @@ velocity_layer = 'velocity'# Key for velocity to be visualized
 
 ### 4. Execute the Scripts
 - After entering the container, navigate to the application directory and run the calculation script:
-```
-python Run_all_methods.py
-```
+  ```
+  python Run_all_methods.py
+  ```
 ### 5. Exploring the Output 
-```
-result
-├── evals
-│   └── Eval.csv                    # GDC, CBDir, and ICCoh value of each method
-├── figures
-│   ├── Merge.svg                   # Velocity stream of all methods
-│   ├── cellDancer.svg              # Velocity stream of each method
-│   ├── DeepVelo (GCN-based).svg
-│   ├── DeepVelo (VAE-based).svg
-│   ├── Dynamo.svg
-│   ├── LatentVelo.svg
-│   ├── MultiVelo.svg
-│   ├── scVelo (dynamic).svg
-│   ├── scVelo (stochastic).svg
-│   ├── STT.svg
-│   ├── TFvelo.svg
-│   ├── UniTVelo.svg
-│   ├── veloAE.svg
-│   ├── velocyto.svg
-│   ├── veloVAE.svg
-│   └── veloVI.svg
-├── execution_log.txt               # Log file for running all methods
-├── celldancer.h5ad                 # .h5ad files contain results of each methods, the RNA velocity result in adata.layers['velocity']
-├── deepvelo_gcn.h5ad
-├── deepvelo_vae.h5ad
-├── dynamo.h5ad
-├── latentvelo.h5ad
-├── multivelo.h5ad
-├── phylovelo.h5ad
-├── scvelo.dyn.h5ad
-├── scvelo.sto.h5ad
-├── stt.h5ad
-├── tfvelo.svg
-├── unitvelo.h5ad
-├── veloae.h5ad
-├── velocyto.h5ad
-├── velovae.h5ad
-└── velovi.h5ad
-```
+  ```
+  result
+  ├── evals
+  │   └── Eval.csv                    # GDC, CBDir, and ICCoh value of each method
+  ├── figures
+  │   ├── Merge.svg                   # Velocity stream of all methods
+  │   ├── cellDancer.svg              # Velocity stream of each method
+  │   ├── DeepVelo (GCN-based).svg
+  │   ├── DeepVelo (VAE-based).svg
+  │   ├── Dynamo.svg
+  │   ├── LatentVelo.svg
+  │   ├── MultiVelo.svg
+  │   ├── scVelo (dynamic).svg
+  │   ├── scVelo (stochastic).svg
+  │   ├── STT.svg
+  │   ├── TFvelo.svg
+  │   ├── UniTVelo.svg
+  │   ├── veloAE.svg
+  │   ├── velocyto.svg
+  │   ├── veloVAE.svg
+  │   └── veloVI.svg
+  ├── execution_log.txt               # Log file for running all methods
+  ├── celldancer.h5ad                 # .h5ad files contain results of each methods, the RNA velocity result in adata.layers['velocity']
+  ├── deepvelo_gcn.h5ad
+  ├── deepvelo_vae.h5ad
+  ├── dynamo.h5ad
+  ├── latentvelo.h5ad
+  ├── multivelo.h5ad
+  ├── phylovelo.h5ad
+  ├── scvelo.dyn.h5ad
+  ├── scvelo.sto.h5ad
+  ├── stt.h5ad
+  ├── tfvelo.svg
+  ├── unitvelo.h5ad
+  ├── veloae.h5ad
+  ├── velocyto.h5ad
+  ├── velovae.h5ad
+  └── velovi.h5ad
+  ```
 
 ## Contact Us
 If you have any questions or suggestions, please contact the project maintainers:
