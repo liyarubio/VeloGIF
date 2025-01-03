@@ -47,6 +47,12 @@ docker pull your_repository/velogif:latest
 ```
 docker images
 ```
+### 4. Download the scripts on GitHub, and extract files
+```
+unzip VeloGIF-main.zip
+cd VeloGIF-main
+unzip tools.zip
+```
 
 ## Getting started
 ### 1. Start the Container (Mount GPU and Specify Directory)
