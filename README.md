@@ -93,7 +93,11 @@ cd /velogif
   
 - Note that [Mutivelo](https://github.com/welch-lab/MultiVelo/) need chromatin accessibility information, [PhyloVelo](https://phylovelo.readthedocs.io/en/latest) need lineage information, and [TFvelo](https://github.com/xiaoyeye/TFvelo) need gene regulatory database. 
 
-- We provide [demo data](https://figshare.com/ndownloader/files/51461450), which is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z). ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information.
+- We provide [demo data](https://figshare.com/ndownloader/files/51461450), which is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z). ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information. Please place the downloaded ```Demo_data_for_VeloGIF.zip``` into the currently mounted ```VeloGIF-main``` folder, extract it to ```Input_data``` fold.
+  ```
+  unzip Demo_data_for_VeloGIF.zip
+  
+  ```
 
 #### Select algorithms
 - Users can choose algorithms based on our comprehensive [benchmark](https://sysomics.com/velogif/benchmark/Overall_Performance.html), the [characteristics](https://sysomics.com/velogif/rna_velocity_methods/Methods_Introduction.html), and the [input data](https://sysomics.com/velogif/rna_velocity_methods/input_data_requirement.html) required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
