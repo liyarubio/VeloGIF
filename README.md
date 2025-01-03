@@ -64,12 +64,12 @@ docker run -d --name <container name> -v <your host path>:<container path> <imag
 ```
 - eg. With GPU:
 ```
-docker run -d --gpus all --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
+docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
 ```
 
 - eg. Without GPU:
 ```
-docker run -d --name velogif -v /Your_Path:/velogif your_repository/velogif:latest
+docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
 ```
 
 ### 2. Access the Container Console
