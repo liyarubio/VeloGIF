@@ -43,6 +43,10 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 ```
 docker pull your_repository/velogif:latest
 ```
+- check local images and ensure that the VeloGIF is successfully pulled
+```
+docker images
+```
 
 ## Getting started
 ### 1. Start the Container (Mount GPU and Specify Directory)
