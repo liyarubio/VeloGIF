@@ -46,11 +46,11 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
   docker images
   ```
 ### 4. Download the scripts on [VeloGIF GitHub](https://github.com/liyarubio/VeloGIF/archive/refs/heads/main.zip), and extract files
-    ```
-    unzip VeloGIF-main.zip
-    cd VeloGIF-main
-    unzip tools.zip
-    ```
+```
+unzip VeloGIF-main.zip
+cd VeloGIF-main
+unzip tools.zip
+```
 
 ## Getting started
 ### 1. Start the Container (Mount GPU and Specify Directory)
