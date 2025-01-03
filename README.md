@@ -51,7 +51,7 @@ docker images
 ## Getting started
 ### 1. Start the Container (Mount GPU and Specify Directory)
 
--Start the container using the following command, mounting the GPU and specifying the directory:
+- Start the container using the following command, mounting the GPU and specifying the directory:
 
 ```
 docker run -d --name <container name> -v <your host path>:<container path> <image>
