@@ -118,7 +118,8 @@ device = 'cuda:0' # GPU
 seed = 2024 # random seed
 embed = 'umap' # Key for embedding
 data_cluster = 'CellType' # Key for annotations of observations/cells, a column included in adata.obs
-gene_number = 2000 # Gene number 
+gene_number = 2000 # Gene number
+velocity_layer = 'velocity'# Key for velocity to be visualized
 ```
 
 - Each algorithm requires different parameters, and we keep the default parameters of the algorithm, as detailed on [Default Parameters](https://sysomics.com/velogif/tutorials/Default_Parameters.html). Users also can customize the parameters of each algorithm by modifying ```run_X.py```.
