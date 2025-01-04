@@ -40,7 +40,7 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 
 - configure the provided image repository address and account information, then pull the required Docker image:
   ```
-  docker pull your_repository/velogif:latest
+  docker pull velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
   ```
 - check local images and ensure that the VeloGIF is successfully pulled
   ```
@@ -63,12 +63,12 @@ unzip tools.zip
   ```
 - eg. With GPU:
   ```
-  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
+  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif
   ```
 
 - eg. Without GPU:
   ```
-  docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif your_repository/velogif:latest
+  docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif
   ```
 
 ### 2. Access the Container Console
