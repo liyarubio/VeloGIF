@@ -54,7 +54,7 @@ unzip tools.zip
 ```
 
 ## Getting started
-### 1. Start the Container and Mount Folder
+### 1. Start the Container and Mount Local Directories
 
 - Start the container using the following command, mounting the GPU and specifying the directory:
 
