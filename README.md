@@ -34,7 +34,7 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
    ```
    
 - Install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
-- Note that the CUDA is required for LatentVelo.
+- Note that CUDA is required for LatentVelo.
 
 ### 3. Set the Image Repository and Pull the Image
 
