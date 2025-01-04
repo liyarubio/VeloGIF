@@ -1,4 +1,4 @@
-# VeloGIF - Integration tool of 15 single cell RNA velocity methods
+# VeloGIF - Integration tool of 15 single-cell RNA velocity methods
 <img src="https://github.com/liyarubio/VeloGIF/blob/main/Figure/VeloGIF.png" style="width: 50%; height: 50%;">
 More details in our website : https://sysomics.com/velogif
 
