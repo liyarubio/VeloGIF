@@ -63,12 +63,12 @@ unzip tools.zip
   ```
 - eg. With GPU:
   ```
-  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif
+  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
   ```
 
 - eg. Without GPU:
   ```
-  docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif
+  docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
   ```
 
 ### 2. Access the Container Console
