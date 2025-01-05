@@ -49,7 +49,7 @@ If you need to use GPU and CUDA, install the NVIDIA Container Toolkit.
 ### 4. Download the scripts on [VeloGIF GitHub](https://github.com/liyarubio/VeloGIF/archive/refs/heads/main.zip), and extract files
 ```
 unzip VeloGIF-main.zip
-cd VeloGIF-main
+cd VeloGIF-main/velogif/
 unzip tools.zip
 ```
 
@@ -63,12 +63,12 @@ unzip tools.zip
   ```
 - eg. With GPU:
   ```
-  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
+  docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main/velogif:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
   ```
 
 - eg. Without GPU:
   ```
-  docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
+  docker run -d --name velogif -v /Your_Path/VeloGIF-main/velogif:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
   ```
 
 ### 2. Access the Container Console
