@@ -1,16 +1,16 @@
-欢迎来到我们的RNA项目介绍
-==========================
+VeloGIF - Integration tool of 15 RNA velocity methods
+=================================================================
 
-.. image:: /images/ph1.png
-   :alt: 项目首页图片
+.. image:: images/ph1.png
+   :alt: main pages
    :width: 100%
 
-项目列表
---------
+Content list
+----------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: 15个RNA相关项目
+   :caption: Velogif
 
    projects/velocyto
    projects/scVelo
