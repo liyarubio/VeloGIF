@@ -1,0 +1,15 @@
+{# _templates/layout.html #}
+{% extends "!layout.html" %}
+
+{% block header %}
+  <div class="wy-side-nav-search">
+    <a class="navbar-brand" href="{{ pathto(master_doc, 1) }}">
+      VeloGIF
+    </a>
+    <div class="header-links">
+      <a href="https://github.com/liyarubio/VeloGIF" target="_blank" aria-label="GitHub">
+        <img src="{{ pathto('_static/github-icon.png', 1) }}" alt="GitHub" style="width:24px; height:24px;">
+      </a>
+    </div>
+  </div>
+{% endblock %}

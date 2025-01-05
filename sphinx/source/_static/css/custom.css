@@ -1,0 +1,142 @@
+.highlight pre {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+}
+.image-text-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-container {
+    flex: 1;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.wy-nav-content-wrap {
+    padding-right: 100px;
+}
+
+.wy-nav-content {
+    max-width: 1200px !important;
+    width: auto !important;
+}
+
+.spacer {
+    display: block;
+    height: 50px;
+    margin: 0;
+}
+
+.spacer100 {
+    display: block;
+    height: 100px;
+    margin: 0;
+}
+
+.green-bold {
+    color: green;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.large-text {
+    font-size: 1.3em;
+    color: inherit;
+    font-weight: normal;
+}
+
+.mid-text {
+    font-size: 1.1em;
+    color: inherit;
+    font-weight: normal;
+    line-height: 0.7em;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.custom-table th, .custom-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+    border: 1px solid #ddd;
+    min-width: 100px;
+}
+
+.custom-table td a.green-bold {
+    color: green;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+/* 固定表头 */
+.custom-table thead tr th {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2;
+}
+
+/* 固定第一个td列 */
+.custom-table td:first-of-type {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 1;
+    border: 1px solid #ddd;
+    min-width: 150px;
+    max-width: 200px;
+    white-space: normal;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Mode列的链接样式 */
+.custom-table td a {
+    display: block;
+    margin: 8px 0;
+    padding: 4px 0;
+}
+
+/* 表头左上角单元格的z-index */
+.custom-table thead tr th:first-child {
+    z-index: 3;
+}
+/* 奇偶行变色 */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;  /* 偶数行浅灰色背景 */
+}
+
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;  /* 奇数行白色背景 */
+}
+
+/* 确保固定列的背景色与行的背景色一致 */
+.custom-table tbody tr:nth-child(even) td:first-of-type {
+    background-color: #f8f9fa;
+}
+
+.custom-table tbody tr:nth-child(odd) td:first-of-type {
+    background-color: #ffffff;
+}
+
+/* 鼠标悬停效果 */
+.custom-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.custom-table tbody tr:hover td:first-of-type {
+    background-color: #f0f0f0;
+}
