@@ -66,11 +66,6 @@ unzip tools.zip
   docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main/velogif:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
   ```
 
-- eg. Without GPU:
-  ```
-  docker run -d --name velogif -v /Your_Path/VeloGIF-main/velogif:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
-  ```
-
 ### 2. Access the Container Console
 
 - Enter the interactive terminal of the container with the following command:
@@ -92,7 +87,7 @@ unzip tools.zip
   
 - Note that [Mutivelo](https://github.com/welch-lab/MultiVelo/) need chromatin accessibility information, [PhyloVelo](https://phylovelo.readthedocs.io/en/latest) need lineage information, and [TFvelo](https://github.com/xiaoyeye/TFvelo) need gene regulatory database. 
 
-- We provide [demo data](https://figshare.com/ndownloader/files/51461450), which is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z). ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information. Please put the downloaded ```Demo_data_for_VeloGIF.zip``` into the currently mounted ```VeloGIF-main``` folder, and unzip it to form the ```Input_data``` folder.
+- We provide [demo data](https://figshare.com/ndownloader/files/51461450), which is sampled 1000 cells from [ReDeeM dataset](https://doi.org/10.1038/s41586-024-07066-z). ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information. Please put the downloaded ```Demo_data_for_VeloGIF.zip``` into the currently mounted ```velogif``` folder, and unzip it to form the ```Input_data``` folder.
   ```
   unzip Demo_data_for_VeloGIF.zip
   ```
