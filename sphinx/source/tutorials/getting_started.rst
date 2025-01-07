@@ -16,14 +16,7 @@ Getting Started
 
   .. code-block:: bash
 
-      docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
-
-- eg. Without GPU:
-
-  .. code-block:: bash
-
-      docker run -d --name velogif -v /Your_Path/VeloGIF-main:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
-
+      docker run -d --gpus all --name velogif -v /Your_Path/VeloGIF-main/velogif:/velogif velogif-registry.ap-southeast-1.cr.aliyuncs.com/velogif/velogif:latest
 
 2. Access the Container Console
 ---------------------------------------------------------------------------------------------
@@ -76,7 +69,7 @@ Input Data
 
    <a href="https://github.com/xiaoyeye/TFvelo" target="_blank">TFvelo</a>
 
-- We provide |demo_data|, which is sampled 1000 cells from |redeem|. ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information. Please put the downloaded ``Demo_data_for_VeloGIF.zip`` into the currently mounted ``VeloGIF-main`` folder, and unzip it to form the ``Input_data`` folder.
+- We provide |demo_data|, which is sampled 1000 cells from |redeem|. ReDeeM dataset include splice, unsplice, lineage, and chromatin accessibility information. Please put the downloaded ``Demo_data_for_VeloGIF.zip`` into the currently mounted ``VeloGIF-main`` folder, and unzip it.
 
 .. |demo_data| raw:: html
 
@@ -86,14 +79,14 @@ Input Data
 
    <a href="https://doi.org/10.1038/s41586-024-07066-z" target="_blank">ReDeeM dataset</a>
 
-  .. code-block:: bash
+.. code-block:: bash
 
-      unzip Demo_data_for_VeloGIF.zip
+    unzip Demo_data_for_VeloGIF.zip
 
 Select Algorithms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Users can choose algorithms based on our comprehensive |benchmark|, the |characteristics|, and the |input_data| required for the different algorithms. Note that VeloGIF provides the running environment for all 15 algorithms.
+- Users can choose algorithms based on our comprehensive |benchmark|, the |characteristics|, and the |input_data| required for the different algorithms. VeloGIF provides the running environment for all 15 algorithms.
 
 .. |benchmark| raw:: html
 
@@ -107,23 +100,24 @@ Select Algorithms
 
    <a href="https://sysomics.com/velogif/rna_velocity_methods/input_data_requirement.html" target="_blank">input data</a>
 
-  .. code-block:: python
+.. code-block:: python
 
-      Methods =['velocyto',
-                'scvelo',
-                'veloae',
-                'dynamo',
-                'velovae',
-                'unitvelo',
-                'deepvelo_vae',
-                'celldancer',
-                'velovi',
-                'latentvelo',
-                'deepVelo_gcn',
-                'stt',
-                'tfvelo', 
-                'multivelo',
-                'phylovelo']
+    Methods =['velocyto',
+              'scvelo',
+              'veloae',
+              'dynamo',
+              'velovae',
+              'unitvelo',
+              'deepvelo_vae',
+              'celldancer',
+              'velovi',
+              'latentvelo',
+              'deepVelo_gcn',
+              'stt',
+              'tfvelo', 
+              'multivelo',
+              'phylovelo']
+
 
 Detailed Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -207,5 +201,3 @@ Evaluation
     ├── velocyto.h5ad
     ├── velovae.h5ad
     └── velovi.h5ad
-
-

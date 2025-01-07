@@ -18,6 +18,6 @@ Overall Performance
     .. raw:: html
 
         <span class="mid-text">
-        Detailed code for RNA velocity benchmark are uploaded on <a href="https://github.com/liyarubio/RNA-velocity-benchmark">GitHub</a>.<br><br>
+        Detailed code for RNA velocity benchmark are uploaded on <a href="https://github.com/liyarubio/RNA-velocity-benchmark" target="_blank">GitHub</a>.<br><br>
         Detailed description of the overall performance can be found in our manuscript.
         </span>

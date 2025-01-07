@@ -81,5 +81,5 @@ Note that CUDA is required for LatentVelo.
    .. code-block:: bash
 
        unzip VeloGIF-main.zip
-       cd VeloGIF-main
+       cd VeloGIF-main/velogif/
        unzip tools.zip
